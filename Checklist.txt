@@ -1,12 +1,12 @@
 1)	Run “diagnose sys tcpsock”
-  a.	Look for “httpsd” process
+  a.	Look for “httpsd” process and is establised
   b.  Check for the existence of httpsd
       <device_IP>:<device_port>-><c2_IP>:<c2_port>-
       >state=established err=0 socktype=1 rma=0 wma=0
       fma=0 tma=0 inode=<inode> process=<PID>/httpsd
 2)   Run “diagnose sys process pidof httpsd”
   a.   Look for PID 90
-3)   3)	Run “diagnose sys csum /data2/.bd.key/httpsd”
+3)   3)	Run “diagnose sys process dump 1”
   a.   Look for deleted preload.so
         Maps:  
         [...]
